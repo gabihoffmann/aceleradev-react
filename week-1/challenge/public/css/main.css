@@ -1,0 +1,352 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+
+.painel{
+	background: url(../img/capa-madmax2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+
+	width: 100%;
+	height: 90vh;
+}
+
+.header-menu{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo-home{
+	padding-left: 10px;
+}
+
+.nav-top-menu{
+	display: flex;
+	justify-content: space-between;
+}
+
+.list-top-menu{
+	display: flex;
+	list-style: none;
+    margin: 0;
+	padding: 0;
+}
+
+.item-menu{
+	margin: 0px 25px;
+}
+
+.item-menu a{
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: width 2s;
+}
+
+.item-menu a:hover{
+	color: #e4bb23;
+}
+
+.header-user{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-user-photo{
+	border-radius: 100%;
+	box-shadow: 0 2px 3px rgba(255,255,255,0.7);
+	overflow: hidden;
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+} 
+
+.header-user-photo img{
+	width: 100%;
+    height: auto;
+}
+
+.header-user-name{
+	color:white;
+	font-weight: bold;
+	font-size: 0.7em;
+
+}
+
+.painel-content{
+	display: flex;
+	flex-direction: column;
+}
+
+.content-title h2{
+	font-size: 60px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.movie-genre{
+	margin: 5px;
+}
+.movie-genre ul{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	margin: 5px;
+	width: 250px;
+	padding: 0;
+}
+
+.movie-genre li{
+	list-style: none;
+}
+
+.movie-categorie{
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	transition: width 2s;
+}
+
+.movie-categorie:hover{
+	color: #e4bb23;
+}
+
+.content-button button{
+	border-radius: 20px;
+	overflow: hidden;
+	background: #e4bb23;
+	padding: 10px 20px;
+	border: none;
+	margin-top: 5px ;
+}
+
+.content-button button:hover{
+	background-color: #bc9a1d;
+}
+
+.content-button a{
+	text-decoration: none;
+	font-size: 15px;
+	color: black;
+	padding: 20px 20px 25px;
+}
+
+.content-button i{
+	position: relative;
+	
+}
+
+.content-footer{
+	padding: 20px 0;
+    font-size: 15px;
+	color: #fff;
+	font-weight: lighter;
+}
+.content-footer p:last-child{
+	color: #e4bb23;
+}
+
+.movies{
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	background-color: #f2f2f2;
+	width: 100%;
+	
+}
+
+.movies-menu{
+	margin: 0 20px;
+}
+
+.movies-menu ul{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.movies-menu li{
+	margin: 0 20px;
+}
+	
+.movies-menu a{
+	text-decoration: none;
+	color: #e4bb23;
+	display: inline-block;
+	padding: 25px 0;
+}
+
+.movies-menu a:hover{
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.container-movies{
+	margin: 0 auto;
+	width: 960px;
+}
+
+.catalog{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.movie-item{
+	list-style: none;
+	background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    overflow: hidden;
+	width: 24%;
+}
+
+.movie-poster{
+	margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-poster img{
+	width: 100%;
+    height: auto;
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease-in;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 80px 10px;
+}
+.movie-poster:hover .overlay{
+	opacity: 1;
+}
+
+.movie-poster p{
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 20px;
+	color: #bc9a1d;
+}
+.overlay i{
+	font-size: 40px;
+	top: 50%;
+  	left: 50%;
+}
+
+.movie-poster .overlay a{
+	color: white;
+	font-size: 20px;
+}
+
+.movie-poster a:hover{
+	color:#e4bb23
+}
+
+.movie-description .title{
+	font-weight: bold;
+}
+
+.movie-description .categories a{
+	text-decoration: none;
+	font-size: 15px;
+	color: #e4bb23
+}
+
+.movie-description{
+	padding: 0 10px;
+}
+
+.movie-note{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.movie-note i{
+	color: #ccc;
+	cursor: pointer;
+}
+
+.movie-note i:hover{
+	color: red;
+}
+
+.note{
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+
+.footer-social-media{
+	display: flex;
+	background-color: white;
+	padding: 20px 40px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.medias{
+	display: flex;
+}
+
+.medias i{
+	font-size: 30px;
+	margin: 10px;
+	color: gray;
+}
+
+#twitter:hover{
+	color: lightskyblue;
+}
+#facebook:hover{
+	color: rgb(15, 70, 250);
+}
+#instagram:hover{
+	color: rgb(253, 78, 174);
+}
