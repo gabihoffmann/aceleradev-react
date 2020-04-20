@@ -4,12 +4,255 @@
 *:after,
 *:before {
 	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* 
+	RESET
+*/
+body{
+	/*
+	 Convertendo o font-size default de 16px para 10px 
+	 A partir de agora 12px == 1.2em em relação ao font-size,
+	*/
+	font-size: 10px; /* font-size: 62.5%; */
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fafafa;
 }
 
+a {
+	text-decoration: none;
+	color:#000;
+}
 
+ul, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
+button { 
+	background-color: transparent;
+	border: none; 
+	box-shadow: none;
+	outline: none;
+}
 
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
 
+/* 
+	CABEÇALHO
+*/
+.topbar{
+	width: 100%;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	position: fixed;
+	padding: 0.8em 1.6em;
+	box-shadow: 0 1px 0 #dbdbdb;
+}
 
+.topbar .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
+.topbar__logo{
+	display: inline-block;
+	height: 4em;
+	margin-left: 0.4em;
+}
 
+.topbar__logo img{
+	height: 100%;
+}
+
+.topbar__icon i{
+	font-size: 1.6em;
+	color: black;
+	padding: 0.1em 0.6em;
+}
+
+main{
+	margin-top: 5.6em;
+	width: 100%;
+}
+
+/*
+	STORIES
+*/
+.stories{
+	display: flex;
+	padding: 1.6em 0;
+}
+.stories__list{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1em 0em;
+}
+
+.stories__item{
+	margin: 0 0.8em;
+	padding: 0.2em;
+	border-radius: 50%;
+}
+
+.stories__item--hasNew{
+	background: linear-gradient(#c72f8e , #f89445);
+}
+
+.stories__item-user{
+	display: flex;
+	place-content: center;
+}
+
+.stories__item-user img{
+	height: 7em;
+	width: 7em;
+	border-radius: 50%;
+	border: solid 0.1em white;
+}
+
+/* 
+	POST FEED
+*/
+
+.feed{
+	display: flex;
+	flex-direction: column;
+	padding: 0 1.6em;
+}
+
+.post{
+	margin: 0 0.5em;
+	margin-bottom: 3em;
+	background-color: white;
+	border-radius: 1em;
+	border: 0.1em solid rgba(0,0,0,0.1);
+}
+/* 
+	CABEÇALHO DO POST
+*/
+.post__header{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.post__user{
+	margin: 0.5em;
+}
+
+.post__user img{
+	height: 4em;
+	width: 4em;
+	border-radius: 50%;
+}
+
+.post__username{
+	margin-left: 0.5em;
+	margin-right: auto;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.post__options{
+	font-size: 1.6em;
+	color: black;
+	padding: 0.1em 0.6em;
+	margin-right: 0.5em;
+	justify-self: end;
+}
+/* 
+	FOTO DO POST
+*/
+.post__photo{
+	margin: 0;
+	width: 100%;
+}
+
+.post__photo img{
+	width: 100%;
+}
+
+/* 
+	ICONES DE COMPARTILHAMENTO
+*/
+
+.post__comment{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;	
+}
+
+.post__icon{
+	font-size: 1.8em;
+	color: black;
+	margin: 0.5em;
+}
+
+.post__icon--enjoy{
+	color: red;
+}
+
+.post__icon--comment{
+	margin-right: auto;
+}
+
+.post__icon--bookmark{
+	margin-right: 0.5em;
+	justify-self: end;
+}
+
+/*
+	CONTADOR CURTIDAS
+*/
+.post__footer{
+	background-color: #f2f2f2;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+
+}
+
+.footer__user{
+	margin: 0.5em;
+}
+
+.footer__user img{
+	height: 3em;
+	width: 3em;
+	border-radius: 50%;
+}
+
+.footer__text{
+	margin-left: 0.3em;
+	font-size: 1.2em;
+}
+
+.footer__text .user__name, .user__counter{
+	font-weight: bold;
+}
+
+/* 
+	Media Querie
+*/
+@media screen and (min-width: 728px) {
+	.container {
+		width: 728px;
+		margin: 0 auto;
+	}
+
+	.feed {
+		padding: 0;
+	}
+}
