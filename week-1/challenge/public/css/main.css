@@ -10,6 +10,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
+
 /* 
 	Criando uma váriavel no CSS
 	A váriavel deve ser criada no escopo do seletor, para que esta fique disponivel globalmente usamos o :root
