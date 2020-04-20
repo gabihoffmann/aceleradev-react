@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Instagram Codenation</title>
 		<meta name="description" content="" />
-		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<link rel="shortcut icon" type="image/png" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="css/normalize.css" />
@@ -12,6 +12,267 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
+		<header class="topbar">
+			<div class="container">
+				<a href="#" class="topbar__logo">
+					<img src="./img/instagram-logo.svg" alt="iInstagram">
+				</a>
+				<button class="topbar__icon">
+					<i class="far fa-paper-plane"></i>
+				</button>
+			</div>
+		</header>
+		<main class="content">
+			<div class="container">
+				<section class="stories">
+					<ul class="stories__list">
+						<li class="stories__item">
+							<a href="#" class="stories__item-user">
+								<img src="./img/profiles/yoda/yoda-profile.jpg" alt="user profile picture">
+							</a>
+						</li>
 
+						<li class="stories__item stories__item--hasNew">
+							<a href="#" class="stories__item-user">
+								<img src="./img/profiles/gamora/gamora-profile.jpg" alt="user profile picture">
+							</a>
+						</li>
+
+						<li class="stories__item stories__item">
+							<a href="#" class="stories__item-user">
+								<img src="./img/profiles/black-panther/black-panther-profile.jpg" alt="user profile picture">
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="container">
+				<section class="feed">
+					<div class="post">
+						<header class="post__header">
+							<a href="#" class="post__user">
+								<img src="./img/profiles/yoda/yoda-profile.jpg" alt="user profile picture">
+							</a>
+							<a href="#" class="post__username">Mestre Yoda</a>
+							<button class="post__options">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</button>
+						</header>
+						<figure class="post__photo">
+							<img src="./img/profiles/yoda/yoda-1.jpg" alt="user photo">
+						</figure>
+						<div class="post__comment">
+							<button class="post__icon post__icon--enjoy">
+								<i class="fa fa-heart" aria-hidden="true"></i>
+								<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--comment">
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</button>
+							<button class="post__icon post__icon--bookmark">
+								<i class="fa fa-bookmark" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="post__footer">
+							
+							<a href="#" class="footer__user">
+								<img src="./img/profiles/domino/domino-profile.jpg" alt="user profile picture">
+							</a>
+							<p class="footer__text">
+								Curtido por <a href="#" class="user__name">Domino</a>
+								e outras <a href="#" class="user__counter">7 pessoas</a>
+							</p>
+
+						</div>
+					</div>
+
+					<div class="post">
+						<header class="post__header">
+							<a href="#" class="post__user">
+								<img src="./img/profiles/gamora/gamora-profile.jpg" alt="user profile picture">
+							</a>
+							<a href="#" class="post__username">Gamora Zen</a>
+							<button class="post__options">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</button>
+						</header>
+						<figure class="post__photo">
+							<img src="./img/profiles/gamora/gamora-2.jpg" alt="user photo">
+						</figure>
+						<div class="post__comment">
+							<button class="post__icon">
+								<i class="fa fa-heart" aria-hidden="true"></i>
+								<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--comment">
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</button>
+							<button class="post__icon post__icon--bookmark">
+								<i class="fa fa-bookmark" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="post__footer">
+							
+							<a href="#" class="footer__user">
+								<img src="./img/profiles/carol/carol-profile.jpg" alt="user profile picture">
+							</a>
+							<p class="footer__text">
+								Curtido por <a href="#" class="user__name">Carol Danvers</a>
+								e outras <a href="#" class="user__counter">5 pessoas</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="post">
+						<header class="post__header">
+							<a href="#" class="post__user">
+								<img src="./img/profiles/black-panther/black-panther-profile.jpg" alt="user profile picture">
+							</a>
+							<a href="#" class="post__username">T'Challa</a>
+							<button class="post__options">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</button>
+						</header>
+						<figure class="post__photo">
+							<img src="./img/profiles/black-panther/black-panther-1.jpg" alt="user photo">
+						</figure>
+						<div class="post__comment">
+							<button class="post__icon">
+								<i class="fa fa-heart" aria-hidden="true"></i>
+								<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--comment">
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</button>
+							<button class="post__icon post__icon--bookmark">
+								<i class="fa fa-bookmark" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="post__footer">
+							
+							<a href="#" class="footer__user">
+								<img src="./img/profiles/bruce/bruce-profile.jpg" alt="user profile picture">
+							</a>
+							<p class="footer__text">
+								Curtido por <a href="#" class="user__name">Bruce Wayne</a>
+								e outras <a href="#" class="user__counter">5 pessoas</a>
+							</p>
+						</div>
+					</div>
+					<div class="post">
+						<header class="post__header">
+							<a href="#" class="post__user">
+								<img src="./img/profiles/carol/carol-profile.jpg" alt="user profile picture">
+							</a>
+							<a href="#" class="post__username">Carol Danvers</a>
+							<button class="post__options">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</button>
+						</header>
+						<figure class="post__photo">
+							<img src="./img/profiles/carol/carol-2.jpg" alt="user photo">
+						</figure>
+						<div class="post__comment">
+							<button class="post__icon">
+								<i class="fa fa-heart" aria-hidden="true"></i>
+								<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--comment">
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</button>
+							<button class="post__icon post__icon--bookmark">
+								<i class="fa fa-bookmark" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="post__footer">
+							
+							<a href="#" class="footer__user">
+								<img src="./img/profiles/yoda/yoda-profile.jpg" alt="user profile picture">
+							</a>
+							<p class="footer__text">
+								Curtido por <a href="#" class="user__name">Mestre Ypda</a>
+								e outras <a href="#" class="user__counter">7 pessoas</a>
+							</p>
+						</div>
+					</div>
+					<div class="post">
+						<header class="post__header">
+							<a href="#" class="post__user">
+								<img src="./img/profiles/domino/domino-profile.jpg" alt="user profile picture">
+							</a>
+							<a href="#" class="post__username">Domino</a>
+							<button class="post__options">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</button>
+						</header>
+						<figure class="post__photo">
+							<img src="./img/profiles/domino/domino-3.jpg" alt="user photo">
+						</figure>
+						<div class="post__comment">
+							<button class="post__icon">
+								<i class="fa fa-heart" aria-hidden="true"></i>
+								<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--comment">
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</button>
+							<button class="post__icon post__icon--bookmark">
+								<i class="fa fa-bookmark" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="post__footer">
+							
+							<a href="#" class="footer__user">
+								<img src="./img/profiles/black-panther/black-panther-profile.jpg" alt="user profile picture">
+							</a>
+							<p class="footer__text">
+								Curtido por <a href="#" class="user__name">T'Challa</a>
+								e outras <a href="#" class="user__counter">3 pessoas</a>
+							</p>
+						</div>
+					</div>
+					<div class="post">
+						<header class="post__header">
+							<a href="#" class="post__user">
+								<img src="./img/profiles/bruce/bruce-profile.jpg" alt="user profile picture">
+							</a>
+							<a href="#" class="post__username">Bruce Wayne</a>
+							<button class="post__options">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</button>
+						</header>
+						<figure class="post__photo">
+							<img src="./img/profiles/bruce/bruce-4.jpg" alt="user photo">
+						</figure>
+						<div class="post__comment">
+							<button class="post__icon">
+								<i class="fa fa-heart" aria-hidden="true"></i>
+								<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--comment">
+								<i class="fa fa-comment" aria-hidden="true"></i>
+								<!-- <i class="fa fa-comment-o" aria-hidden="true"></i> -->
+							</button>
+							<button class="post__icon post__icon--bookmark">
+								<i class="fa fa-bookmark" aria-hidden="true"></i>
+								<!-- <i class="fa fa-bookmark-o" aria-hidden="true"></i> -->
+							</button>
+						</div>
+						<div class="post__footer">
+							
+							<a href="#" class="footer__user">
+								<img src="./img/profiles/gamora/gamora-profile.jpg" alt="user profile picture">
+							</a>
+							<p class="footer__text">
+								Curtido por <a href="#" class="user__name">Gamora</a>
+								e outras <a href="#" class="user__counter">3 pessoas</a>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+		</main>
 	</body>
 </html>
