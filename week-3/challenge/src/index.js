@@ -31,7 +31,6 @@ const fibonacci = () => {
         console.log(result)
     }
     
-    
     return `n : ${n}\n
             fn: ${fn}\n
             fn1: ${fn_1}\n
@@ -40,9 +39,35 @@ const fibonacci = () => {
             `;
 }
 
-const isFibonnaci = (num) => null
+const isFibonnaci = (num) => {
+    
+    //partindo de n = 2
+    let fn, n = 2;
+    //iniciando a sequência com F(0) e F(1)  igual a 1
+    let result = [1,1]; 
+
+    //Testar se num está nas posições 0 ou 1 do vetor
+    if(num == result[0] || num == result[1]){
+        return true
+    }else{
+        do{
+            fn = result[n-2] + result[n-1];
+            result.push(fn);
+           
+            if(result[n] == num ){
+                return true
+            }
+
+            n++;
+            
+        }while(result[n-1] <= num)
+    }
+
+    return false
+
+}
 
 module.exports = {
     fibonacci,
-    isFibonnaci
+    isFibonnaci,
 }
