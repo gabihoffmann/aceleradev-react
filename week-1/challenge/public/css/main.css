@@ -11,6 +11,17 @@ body {
 	margin: 0;
 }
 
+/* 
+	Criando uma váriavel no CSS
+	A váriavel deve ser criada no escopo do seletor, para que esta fique disponivel globalmente usamos o :root
+	Uma váriavel é declada com a seguinte estrutura { --variable-name : value }
+	Para utilizar(chamar) a variavel utiliza a função var com a seguinte estrutura {color : var(--variable-name)}
+*/
+:root{
+	--yellow-default: #e4bb23;
+	--yellow-second: #bc9a1d;
+}
+
 .painel{
 	background: url(../img/capa-madmax2.jpg);
 	background-repeat: no-repeat;
@@ -64,7 +75,7 @@ body {
 }
 
 .item-menu a:hover{
-	color: #e4bb23;
+	color: var(--yellow-default);
 }
 
 .header-user{
@@ -133,20 +144,20 @@ body {
 }
 
 .movie-categorie:hover{
-	color: #e4bb23;
+	color: var(--yellow-default);
 }
 
 .content-button button{
 	border-radius: 20px;
 	overflow: hidden;
-	background: #e4bb23;
+	background: var(--yellow-default);
 	padding: 10px 20px;
 	border: none;
 	margin-top: 5px ;
 }
 
 .content-button button:hover{
-	background-color: #bc9a1d;
+	background-color: var(--yellow-second);
 }
 
 .content-button a{
@@ -168,7 +179,7 @@ body {
 	font-weight: lighter;
 }
 .content-footer p:last-child{
-	color: #e4bb23;
+	color: var(--yellow-default);
 }
 
 .movies{
@@ -200,13 +211,13 @@ body {
 	
 .movies-menu a{
 	text-decoration: none;
-	color: #e4bb23;
+	color: var(--yellow-default);
 	display: inline-block;
 	padding: 25px 0;
 }
 
 .movies-menu a:hover{
-	box-shadow: inset 0 -1px 0 #e4bb23;
+	box-shadow: inset 0 -1px 0 var(--yellow-default);
 }
 
 .container-movies{
@@ -269,7 +280,7 @@ body {
 	text-transform: uppercase;
 	font-weight: bolder;
 	font-size: 20px;
-	color: #bc9a1d;
+	color: var(--yellow-second);
 }
 .overlay i{
 	font-size: 40px;
@@ -283,7 +294,7 @@ body {
 }
 
 .movie-poster a:hover{
-	color:#e4bb23
+	color: var(--yellow-default);
 }
 
 .movie-description .title{
@@ -293,7 +304,7 @@ body {
 .movie-description .categories a{
 	text-decoration: none;
 	font-size: 15px;
-	color: #e4bb23
+	color: var(--yellow-default);
 }
 
 .movie-description{
