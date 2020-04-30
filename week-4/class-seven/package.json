@@ -1,0 +1,14 @@
+{
+  "name": "aula-rick-and-morty",
+  "version": "1.0.0",
+  "description": "\"example js programing class\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "\"Gabi Hoffmann\"",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^25.5.2"
+  }
+}
