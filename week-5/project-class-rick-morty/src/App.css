@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.cards-episodes{
+  width: auto;
+  padding: 5px;
+  margin-right: 5px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

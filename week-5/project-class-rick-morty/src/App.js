@@ -126,22 +126,23 @@ handleChange(value){
 
         {this.state.loading ? <Loading /> : null}
 
-        <section>
+        
+         <section className="cards-episodes">
           {this.state.characters.map((character) => {
-            return(
-            <Card key={character.id}>
-              <CardImg alt={character.name} image={character.image}/>
-              <CardBody>
-                <CardTitle title={character.name}/>
-                <CardText text={`Situação: ${character.status}`}/>
-                <CardText text={`Sexo: ${character.gender}`}/>
-              </CardBody>
-            </Card>
-            )
-          }
+              return(
+                <Card key={character.id}>
+                  <CardImg alt={character.name} image={character.image}/>
+                  <CardBody>
+                    <CardTitle title={character.name}/>
+                    <CardText text={`Situação: ${character.status}`}/>
+                    <CardText text={`Sexo: ${character.gender}`}/>
+                  </CardBody>
+                </Card>
+              )
+            }
           )}
+         </section>
          
-        </section>
 
         </Container>
 
