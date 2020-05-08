@@ -3,16 +3,16 @@ import './styles/select.css'
 
 export default class Select extends Component{
 
-    componentWillUnmount(){
-        console.log('willUnmount')
-    }
-
     render(){
+
+        const options = this.props.options;
+
         return(
-            <select className="select">
-                <option>oprtion 1</option>
-                <option>oprtion 2</option>
-                <option>oprtion 3</option>
+            <select className="select"
+                    onChange={event => this.props.handleChange(event.target.value)}>
+                {options.map((number) => {
+                     return <option value={number} key={number}>{number}</option>
+                })}
             </select>
     )}
 }
