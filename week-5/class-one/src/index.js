@@ -1,41 +1,80 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-function tick(){
-  const element = (
-    <div>
-      <h1>Hello</h1>
-  <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
+class Clock extends React.Component{
+  //Metodos do ciclo de vida
+  //O construtor é chamado uma unica vez
+  constructor(props){
+    super(props);
+    this.state = {date: new Date()}
+  }
 
-  ReactDOM.render(
-    element,document.getElementById('root')
-  )
+  //é executado depois que a saida do componente é renderizado na DOM
+  componentDidMount(){
+    //Adicionando campos a classe Clock
+      this.timerID = setInterval(
+        ()=> this.tick(), 1000
+      );
+  }
 
-}
+  componentWillUnmount(){
+    clearInterval(this.timerID);
+  }
 
-//Criando um componente com function
-function Welcome(props){
-return <h1>Hello, {props.name}</h1>
-}
+  tick(){
+    this.setState({
+      date: new Date()
+    })
+  }
 
-//Criando um componente com Class
-class WelcomeOne extends Component{
   render(){
     return(
-    <h1>Hello, {this.props.name}</h1>
-    )
-  }
+      <div>
+        <h1> hello</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  };
 }
+
+
+ReactDOM.render(<Clock />,document.getElementById('root'));
 /**
- * Os dois componentes acima são equivalentes do ponto de vista do React.
- */
+ * 1 - Quando o component Clock é passado para o render da ReactDOM,
+ *    o React chama o construtor de Clock
+ *    Etapa MOUNTING do ciclo
+ *    Nesse momento Clock inicializa o this.state com a hora atual
+ *  2 - Então o render do Clock é chamado, e o React exibe na tela e atualiza o DOM
+ *    para coincidir com a renderização do Clock
+ *  3 - Quando Clock é inserido na DOM, o React chama o ciclo de vida
+ *  pelo metodo componentDidMount(), que dentro dele o componente Clock pede pronavegador
+ * configurar um temporizador que chama tick()
+ *  4 - tick() por sua vez atualiza o estado de state com setState()
+ *  que terá uma nova saida para render() do Clock que atualiza a ReactDOM que atualiza a DOM
+ * 
+ *  5 - se o componente Clock for removido da DOM, o React chama o ciclo 
+ * componentWillUnmount() para encerrar o temporizador
+ * 
+ * */
 
-const element = <Welcome name="Gabi"/>
-ReactDOM.render(
-  <Welcome name="name"/>,
-  document.getElementById('root')
-);
+ /**
+  * STATE
+  * O estado nunca é atualizado diretamente utiliza this.setState
+  * O unico lugar que atribui state é no construtor
+  * 
+  * A atualização do state é assincrono, para utilizar os valores do state autual para caulcular o proximo
+  * passa uma função dentro de setState 
+  *  this.setState((state,props)=>{
+  *     counter: state.counter + props.increment
+  * })
+  * 
+  * state pode conter varias variaves e estas podem ser atualidas independentemente
+  * this.state = {
+  *   post: [],
+  *   comments: []
+  * }
+  * 
+  * e e
+  * 
+  */
 
-//setInterval(tick, 2000)
