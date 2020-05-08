@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 import Button from './components/Button'
@@ -14,54 +14,78 @@ import {
   CardTitle
 } from './components/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <Container>
-       <FormGroup>
-        <Label label="Status"/>
-          
-         <div>
-         <Button name="Todos"/>
-          <Button name="Vivo"/>
-          <Button name="Morto"/>
-          <Button name="Desconhecido"/>
-         </div>
-       </FormGroup>
+class App extends Component {
+  //Inicia o state da aplicação - MOUNTING
+  constructor(){
+    super();
+    this.state = {
+      name: "React"
+    }
+    console.log('Constructor')
+  }
 
-       <FormGroup>
-        <Label label="Sexo"/>
-          
-         <div>
+  //nesse momento o Componente já foi renderizado
+  //
+  componentDidMount(){
+      console.log('didmount')
+      setTimeout(() => {
+        this.setState({name: 'javascript', hide: true})
+      });
+  }
+
+  componentDidUpdate(){
+    console.log('didUpdate')
+  }
+
+  render(){
+    console.log('Renderizar', this.state.name)
+    return (
+      <div className="App">
+        <Container>
+        <FormGroup>
+          <Label label="Status"/>
+            
+          <div>
           <Button name="Todos"/>
-          <Button name="Homen"/>
-          <Button name="Mulher"/>
-          <Button name="Desconhecido"/>
-         </div>
-       </FormGroup>
+            <Button name="Vivo"/>
+            <Button name="Morto"/>
+            <Button name="Desconhecido"/>
+          </div>
+        </FormGroup>
 
-       <FormGroup> 
-         <Label label="Episódio"/>
-        <Select/>
-    
-       </FormGroup>
+        <FormGroup>
+          <Label label="Sexo"/>
+            
+          <div>
+            <Button name="Todos"/>
+            <Button name="Homen"/>
+            <Button name="Mulher"/>
+            <Button name="Desconhecido"/>
+          </div>
+        </FormGroup>
+
+        <FormGroup> 
+          <Label label="Episódio"/>
+          {this.state.hide ? null :<Select/>}
+        </FormGroup>
 
 
-       <section>
-        <Card>
-            <CardImg alt="Title Image"/>
-            <CardBody>
-              <CardTitle title="exemplo"/>
-              <CardText text="texto"/>
-            </CardBody>
-          </Card>
-       </section>
+        <section>
+          <Card>
+              <CardImg alt="Title Image"/>
+              <CardBody>
+                <CardTitle title="exemplo"/>
+                <CardText text="texto"/>
+              </CardBody>
+            </Card>
+        </section>
 
-      </Container>
+        </Container>
 
-      
-    </div>
-  );
+        
+      </div>
+    );
+  }
 }
 
 export default App;
