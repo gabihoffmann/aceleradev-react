@@ -10,7 +10,7 @@ const Todo = () => {
     const handleFormSubmit = event => {
         event.preventDefault();
         if(task.trim()){
-            updateTasks([...tasks, task])
+           updateTasks([...tasks, task])
             updateTask('')
         }
     }
@@ -19,15 +19,17 @@ const Todo = () => {
     <>{/* Fragment */}
         <form onSubmit={handleFormSubmit}>
             <input 
+                data-testid="form-field"
                 type="text"
                 onChange={handleInputChange}
                 placeholder= "Digite uma nova tarefa aqui"
                 value={task}/>
             <button
                 type="submit"
+                data-testid="form-btn"
                 >Add new task</button>
         </form>
-        <table>
+        <table data-testid="table">
             <thead>
                 <tr>
                     <th>Todo</th>
@@ -35,7 +37,7 @@ const Todo = () => {
             </thead>
             <tbody>
             {tasks.map((t, index)=>(
-                <tr key={index} >{t}</tr>
+                <tr key={index}>{t}</tr>
             ))}
             </tbody>
         </table>
