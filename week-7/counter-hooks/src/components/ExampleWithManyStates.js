@@ -15,7 +15,7 @@ export default function ExampleWithManyStates(){
 
     return(
         <div className="container">
-            <h2>Varios Hooks</h2>
+            <h2>Vários Hooks</h2>
             <input type="text" placeholder="Nome" 
             value={name} onChange={handleChangeName}/>
             <p>Meu nome é: {name}</p>

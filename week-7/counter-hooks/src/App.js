@@ -2,14 +2,21 @@ import React from 'react';
 
 import "./styles.css"
 
-import Counter from './components/Counter'
+import ExampleWithHook from './components/ExampleWithHook';
 import ExampleWithManyStates from './components/ExampleWithManyStates';
+import ExampleWithUseEffects from './components/ExampleWithUseEffects';
+import ExampleWithUseEffectCleaningEffect from './components/ExampleWithUseEffectCleaningEffect'
+import ExampleCustomHooks from './components/ExampleCustomHook';
 
 function App() {
+
   return (
     <div className="App">
-      <Counter />
+      <ExampleWithHook />
       <ExampleWithManyStates />
+      <ExampleWithUseEffects />
+      <ExampleWithUseEffectCleaningEffect />
+      <ExampleCustomHooks/>
     </div>
   );
 }
