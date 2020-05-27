@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {withLoading} from '../hocs/withLoading';
 const Infos = () => (
     <ul
         style={{clear: 'both', display: 'block', listStyle: 'none'}}>
@@ -11,4 +11,5 @@ const Infos = () => (
     </ul>
 );
 
-export default Infos;
+//Envolvendo o componete INFOS com o HOC
+export default withLoading(Infos);

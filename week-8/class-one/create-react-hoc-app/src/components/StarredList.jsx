@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {withLoading} from '../hocs/withLoading'
 
 const StarredList = () => (
     <ul style={{ clear: 'both', display: 'block', listStyle: 'none' }}>
@@ -8,4 +9,4 @@ const StarredList = () => (
   </ul>
 );
 
-export default StarredList;
+export default withLoading(StarredList);

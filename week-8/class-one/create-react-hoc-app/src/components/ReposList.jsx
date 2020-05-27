@@ -1,4 +1,5 @@
 import React from 'react'
+import {withLoading} from '../hocs/withLoading';
 
 const ReposList = () => (
     <ul
@@ -9,4 +10,4 @@ const ReposList = () => (
     </ul>
 );
 
-export default ReposList;
+export default withLoading(ReposList);
